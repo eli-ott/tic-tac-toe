@@ -1,0 +1,246 @@
+:root {
+    --color: #363636;
+    --background: #f3f3f3;
+    --contrast: rgb(228, 127, 80);
+
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+@font-face {
+    font-family: contentFont;
+    src: url(../font/Prompt-ExtraLight.ttf);
+}
+@font-face {
+    font-family: header;
+    src: url(../font/Prompt-Bold.ttf);
+}
+
+html {
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: contentFont;
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background: var(--background);
+    color: var(--color);
+}
+
+h1 {
+    font-family: header;
+
+    margin: 0;
+    padding: 0;
+    font-size: 10vh;
+    height: 110px;
+
+    border-bottom: solid 6px var(--contrast);
+}
+
+img.themeIcon {
+    position: absolute;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    width: 30px;
+    top: 0;
+    left: 0;
+    margin: 1vh;
+    padding: 0;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    border-radius: 100vh;
+    -webkit-border-radius: 100vh;
+    -moz-border-radius: 100vh;
+    -ms-border-radius: 100vh;
+    -o-border-radius: 100vh;
+}
+
+section#background {
+    position: absolute;
+    background: none;
+
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+svg.backgruondIcons {
+    background: none;
+
+    border-radius: 100vh;
+    -webkit-border-radius: 100vh;
+    -moz-border-radius: 100vh;
+    -ms-border-radius: 100vh;
+    -o-border-radius: 100vh;
+}
+
+img.themeIcon:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+
+    background: var(--background);
+}
+
+section#leaderboard {
+    position: absolute;
+    background: none;
+
+    top: 0;
+    right: 0;
+    margin: 1vh;
+    width: 125px;
+    height: 125px;
+
+    color: var(--color);
+    background: var(--background);
+}
+section#leaderboard > p {
+    text-align: right;
+
+    margin: 1vh 0;
+    font-size: 2vh;
+}
+section#leaderboard input[type="button"] {
+    position: relative;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-align: right;
+    font-family: contentFont;
+
+    margin: 0;
+    padding: 0;
+    right: -25px;
+    top: 5px;
+    width: 93px;
+    height: 22px;
+    font-size: 1.7vh;
+
+    color: var(--contrast);
+}
+section#leaderboard input[type="button"]:hover {
+    border-bottom: solid 1px var(--contrast);
+}
+
+section#content {
+    background: var(--background);
+}
+section#content > header > p {
+    font-size: 3vh;
+}
+section#content > main > p {
+    font-size: 2vh;
+}
+input.playerButtons {
+    cursor: pointer;
+    background: none;
+    outline: none;
+
+    margin-right: 2vw;
+    font-size: 2vh;
+    width: 150px;
+    height: 45px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+
+    color: var(--contrast);
+    border: solid 1px var(--contrast);
+}
+input.playerButtons:hover {
+    color: var(--background);
+    background: var(--contrast);
+}
+
+section#game {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 606px;
+    width: 606px;
+
+    color: var(--color);
+    background: var(--background);
+}
+
+section#game > .cases {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: contentFont;
+
+    font-size: 10vh;
+    height: 200px;
+    width: 200px;
+    margin: 0;
+
+    border: solid var(--color) 1px;
+}
+section#game > .cases:hover {
+    background: #a2a2a2;
+}
+
+section#endContent {
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+section#endContent > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center; 
+
+    width: 500px;
+}
+section#endContent > div > input[type="button"] {
+    cursor: pointer;
+    outline: none;
+    
+    margin: 0;
+    margin-top: 5vh;
+    font-size: 2vh;
+    width: 150px;
+    height: 45px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    
+    background: var(--background);
+    color: var(--contrast);
+    border: solid 1px var(--contrast);
+}
+section#endContent > div > input[type="button"]:hover {
+    color: var(--background);
+    background: var(--contrast);
+}

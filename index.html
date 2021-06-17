@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://raw.githack.com/eli-ott/javascript-library/main/src/method/array.js"></script>
+    <link rel="stylesheet" href="./style/main.css">
+    <title>Tic-tac-toe</title>
+</head>
+
+<body>
+    <img src="./icons/moon.svg" alt="moon icon" class="themeIcon" id="sun">
+
+    <section id="background"></section>
+
+    <section id="leaderboard">
+        <p class="scores">
+            X score : <span id="xScore"></span>
+        </p>
+        <p class="scores">
+            O score : <span id="oScore"></span>
+        </p>
+
+        <input type="button" value="Reset score" id="reset">
+    </section>
+
+    <section id="content">
+        <header>
+            <h1>
+                Tic-tac-toe
+            </h1>
+            <p>
+                Play tic-tac-toe solo or with friends
+            </p>
+        </header>
+        <main>
+            <p>
+                Choose the number of players :
+            </p>
+            <input class="playerButtons" type="button" value="1 player" id="1player">
+            <input class="playerButtons" type="button" value="2 players" id="2player">
+        </main>
+    </section>
+
+    <section id='game'>
+        <div class="cases" index='0'></div>
+        <div class="cases" index='1'></div>
+        <div class="cases" index='2'></div>
+        <div class="cases" index='3'></div>
+        <div class="cases" index='4'></div>
+        <div class="cases" index='5'></div>
+        <div class="cases" index='6'></div>
+        <div class="cases" index='7'></div>
+        <div class="cases" index='8'></div>
+    </section>
+
+    <section id="endContent">
+        <header>
+            <h1>
+                <span id="winnerSymbol"></span> won !
+            </h1>
+        </header>
+        <div>
+            <input type="button" value="Return home" id="homeBtn" onclick="window.location.reload()">
+            <input type="button" value="Play again" id="playAgain" onclick="playAgain()">
+        </div>
+    </section>
+
+    <script type="text/javascript" src="./js/background.js"></script>
+    <script type="text/javascript" src="./js/darkMode.js"></script>
+    <script type="text/javascript" src="./js/variables.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script text="text/javascript" src="./js/playAgain.js"></script>
+    <script type="text/javascript" src="./js/score.js"></script>
+</body>
+
+</html>
