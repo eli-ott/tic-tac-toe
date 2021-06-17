@@ -20,9 +20,13 @@ $(".cases").on("click", function () {
             if (symbol == 'x') symbol = 'o';
             else if (symbol == 'o') symbol = 'x';
 
+            //we're say it's whose turn
+            $("#currentPlayer").empty();
+            $("#currentPlayer").append(`${symbol.toUpperCase()} turn`);
+
             //w're checking if one of the player won
             if (checkWin()) {
-                setTimeout(() => { stopGame(); checkScore(winner)}, 150);
+                setTimeout(() => { stopGame(); checkScore(winner) }, 150);
             }
         }
     }

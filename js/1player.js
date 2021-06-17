@@ -5,7 +5,7 @@ $(".cases").on("click", function () {
         //we're changing the gamePlate variable to update the page
         gamePlate[parseInt($(this).attr('index'))] = symbol;
     }
-    
+
     for (let i = 0; i < gamePlate.length; i++) {
         if ($(".cases").eq(i).attr('changed') != 'true'
             && gamePlate[i] == 'x'
@@ -18,6 +18,10 @@ $(".cases").on("click", function () {
             $(this).empty();
             $(this).append(gamePlate[i]);
             $(this).attr('changed', 'true');
+
+            //we're say it's whose turn
+            $("#currentPlayer").empty();
+            $("#currentPlayer").append(`Bot turn`);
 
             //we're checking if the player won to stop the game
             //we"re also checking the score to increse the leaderboard scores
@@ -45,6 +49,10 @@ const findEmptyCase = () => {
         $(".cases").eq(caseNumber).empty();
         $(".cases").eq(caseNumber).append('o');
         $(".cases").eq(caseNumber).attr('changed', 'true');
+
+        //we're say it's whose turn
+        $("#currentPlayer").empty();
+        $("#currentPlayer").append(`Your turn`);
 
         //we're letting the player play after the bot finished
         setTimeout(() => { canPlay = true; }, 250);
