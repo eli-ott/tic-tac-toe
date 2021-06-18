@@ -254,6 +254,9 @@ section#endContent > div > input[type="button"]:hover {
 }
 
 @media screen and (max-width: 550px) {
+    html {
+       overflow: hidden;
+    } 
     section#leaderboard {
         width: 100px;
         height: 100px;
